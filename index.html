@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Histoire</title>
+    <link rel="stylesheet" href="histoire.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <section id="inicio">
+
+        <p> Você acorda em uma cama, em um quarto desconhecido. Você se levanta e olha ao redor. Há uma porta. Você: </p>
+        <button onclick="primeiraAcao('abrirPorta')" type="button" class="btn btn-primary"> Abre a porta</button>
+        <button onclick="primeiraAcao('vasculharQuarto')" type="button" class="btn btn-primary"> Vasculha o quarto </button>
+
+    </section>
+
+
+    <section id="olha-ao-redor">
+        <p id="porta-trancada"> A porta está trancada. Você precisa de uma chave.</p>
+        <p> Você olha ao redor, e encontra:</p>
+
+        <button onclick="segundaAcao('armario')"> Armário </button>
+        <button onclick="segundaAcao('criado-mudo')"> Criado mudo </button>
+        <button onclick="segundaAcao('cama')"> Cama </button>
+
+    </section>
+
+    <section id="armario">
+
+        <div id="inicioarmario">
+
+
+            <p>Você decide vasculhar o armário. Ao abrir as portas, nota que há algumas roupas penduradas em cabides. Talvez a chave esteja em algum bolso...</p>
+            <p>Você procura nas:</p>
+
+            <button onclick="procurarnoArmario('calcas')">Calças</button>
+            <button onclick="procurarnoArmario('camisas')">Camisas</button>
+            <button onclick="procurarnoArmario('voltar')">Parar de procurar no armário</button>
+
+        </div>
+
+        <div id="camisas">
+
+            <p>Você começa a buscar os bolsos das camisas e, no bolso frontal de uma camisa branca, você encontra um convite</p>
+            <p> "O jantar será servido às 20h". Você olha no relógio.</p>
+            <p id="horario"> </p>
+
+
+        </div>
+
+        <div id="calcas">
+
+            <p> Você começa a procurar nos bolsos das calças. Há duas, penduradas nos cabides, uma de cor preta e a outra jeans. </p>
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+    <script src="histoire.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
