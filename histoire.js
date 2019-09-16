@@ -7,17 +7,16 @@ let calcas = document.getElementById('calcas')
 let portaTrancada = document.getElementById('porta-trancada')
 let horario = document.getElementById('horario')
 horario.innerText = new Date()
+let gifporta = document.getElementById('gifporta')
+let gifArmario = document.getElementById('gif-armario')
 
 function primeiraAcao(acao) {
-
 
     if (acao === "abrirPorta") {
         portaTrancada.style.display = "block"
 
-
     }
     if (acao === "vasculharQuarto") {
-
 
     }
 
@@ -25,11 +24,32 @@ function primeiraAcao(acao) {
     olhaAoRedor.style.display = "block"
 }
 
+function abrirPorta() {
+    inicio.style.display = "none"
+
+    gifporta.style.display = "block"
+    setTimeout(() => {
+        gifporta.style.display = "none"
+
+        primeiraAcao("abrirPorta")
+    }, 3000)
+
+
+}
+
 function segundaAcao(acao) {
 
     if (acao === 'armario') {
         olhaAoRedor.style.display = "none"
-        armario.style.display = "block"
+
+        gifArmario.style.display = "block"
+        setTimeout(() => {
+            gifArmario.style.display = "none"
+            armario.style.display = "block"
+
+        }, 3000)
+
+
 
     }
 
@@ -44,7 +64,6 @@ function segundaAcao(acao) {
         olhaAoRedor.style.display = "none"
         console.log("Você chegou em cama")
     }
-
 
 }
 
@@ -71,4 +90,11 @@ function procurarnoArmario(acao) {
         olhaAoRedor.style.display = "block"
 
     }
+}
+
+function voltar(acao) {
+
+    camisas.style.display = "none"
+    inicioarmario.style.display = "block"
+
 }

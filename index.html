@@ -10,20 +10,27 @@
 
 </head>
 
-<body>
-
+<body class="container">
+    <h1>Histoire</h1>
     <section id="inicio">
 
-        <p> Você acorda em uma cama, em um quarto desconhecido. Você se levanta e olha ao redor. Há uma porta. Você: </p>
-        <button onclick="primeiraAcao('abrirPorta')" type="button" class="btn btn-primary"> Abre a porta</button>
+        <p> Uma luz fraca permeia suas pálpebras que, aos poucos, se abrem para o teto branco acima. Você pisca algumas vezes, atordoado pelas horas de sono, e olha ao redor. Nenhuma lembrança te vem a respeito daquele quarto, de como você chegou lá, ou de
+            qualquer acontecimento que tenha se passado nas últimas horas. Apenas um nome te ocorre. Aurora. Aurora. Aurora. Você busca por respostas. Você nota uma porta à frente. </p>
+        <button onclick="abrirPorta()" type="button" class="btn btn-primary"> Abre a porta</button>
         <button onclick="primeiraAcao('vasculharQuarto')" type="button" class="btn btn-primary"> Vasculha o quarto </button>
+
+
+
 
     </section>
 
+    <iframe id="gifporta" src="https://giphy.com/embed/cjoidgr3r6VAo7GMwz" width="480" height="480" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
 
     <section id="olha-ao-redor">
-        <p id="porta-trancada"> A porta está trancada. Você precisa de uma chave.</p>
-        <p> Você olha ao redor, e encontra:</p>
+        <p id="porta-trancada"> Você roda a maçaneta fria e empurra a porta, sem sucesso. Ela está trancada, e você precisa de uma chave.</p>
+
+        <p> Você olha ao redor. O quarto é pequeno, iluminado apenas por uma lâmpada fraca, um abajur acima de um criado mudo e a luz natural que entremeia o quarto vindo de uma janela redonda, de moldura de madeira. O quarto tem um ar rústico, de piso em
+            tábuas de madeira, e sem decoração salvo o criado mudo, um armário alto e a cama em que você acordou. Você decide procurar:</p>
 
         <button onclick="segundaAcao('armario')"> Armário </button>
         <button onclick="segundaAcao('criado-mudo')"> Criado mudo </button>
@@ -31,12 +38,13 @@
 
     </section>
 
+    <iframe id="gif-armario" src="https://giphy.com/embed/Z7DJE1mJNzC4o" width="480" height="411" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+
     <section id="armario">
 
         <div id="inicioarmario">
 
-
-            <p>Você decide vasculhar o armário. Ao abrir as portas, nota que há algumas roupas penduradas em cabides. Talvez a chave esteja em algum bolso...</p>
+            <p>Você decide vasculhar o armário. Você puxa as portas pesadas de madeira, que rangem ao se mover. Um cheiro de mofo sobe com o abrir das portas, e você se depara com algumas roupas penduradas em cabides. Talvez a chave esteja em algum bolso...</p>
             <p>Você procura nas:</p>
 
             <button onclick="procurarnoArmario('calcas')">Calças</button>
@@ -47,28 +55,26 @@
 
         <div id="camisas">
 
-            <p>Você começa a buscar os bolsos das camisas e, no bolso frontal de uma camisa branca, você encontra um convite</p>
-            <p> "O jantar será servido às 20h". Você olha no relógio.</p>
+            <p> Há algumas camisas penduradas nos cabides do armário. Todas são do mesmo tamanho - coincidentemente, o seu. Você começa a buscar os bolsos das camisas e, no frontal de uma camisa branca, você encontra um papel dobrado ao meio. Você abre o
+                papel, e percebe ser um convite que, em papel amarelado com o tempo e caligrafia traçada com nanquim, dizia: </p>
+            <p> "O jantar será servido às 20h".</p>
+            <p> Você olha no relógio.</p>
             <p id="horario"> </p>
-
+            <button onclick="voltar('voltar')">Continuar</button>
 
         </div>
 
         <div id="calcas">
 
-            <p> Você começa a procurar nos bolsos das calças. Há duas, penduradas nos cabides, uma de cor preta e a outra jeans. </p>
+            <p> Uma pilha de calças se posta abaixo das camisas penduradas. Você começa a procurar nos bolsos, e no bolso traseiro de uma calça preta, você vê um bilhete, escrito em um guardanapo usado, com letras grandes que quase perfuraram o papel. </p>
+
+
+
 
 
         </div>
 
-
-
-
     </section>
-
-
-
-
 
     <script src="histoire.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
